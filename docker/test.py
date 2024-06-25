@@ -9,4 +9,6 @@ try:
     response.raise_for_status()  # Raise an exception for bad responses
     print(response.json())
 except requests.RequestException as e:
-    print(response.json())
+    print(f"Request failed: {e}")
+    if response is not None:  # Check if a response was received
+        print(response.json())  # Print the JSON error message
