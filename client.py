@@ -1,13 +1,16 @@
-import google.cloud.logging
 import requests
 import time
+import logging
+from google.cloud import logging_v2
 
 import os
 
 service_url = os.environ["CLOUD_RUN_SERVICE_URL"]
+project_id = os.environ["PROJECT_ID"]
+
 
 # Cloud Logging setup
-logging_client = google.cloud.logging.Client()
+logging_client = logging_v2.Client(project=project_id)
 logger = logging_client.logger('cloud_run_async_calls')
 
 def call_cloud_run(sku, max_retries=3):

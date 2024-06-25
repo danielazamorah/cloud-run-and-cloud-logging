@@ -62,4 +62,13 @@ pip3 install -r requirements.txt
 ```
 ```bash
 export CLOUD_RUN_SERVICE_URL='your-cloud-run-service-url'
+export PROJECT_ID='your-project-id'
+```
+Authenticate with your credentials (or Service Account):
+```bash
+gcloud auth application-default login
+```
+Run client test:
+```bash
+python3 client.py
 ```
