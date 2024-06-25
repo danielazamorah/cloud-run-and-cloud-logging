@@ -1,0 +1,14 @@
+# This is a gitignore file for the cloud-run-and-cloud-logging repository.
+
+# Python
+venv
+*.pyc
+__pycache__
+
+# Cloud Run
+cloudrun-env
+
+# Docker
+docker/Dockerfile
+docker/main.py
+docker/test.py
