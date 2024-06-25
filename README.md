@@ -18,7 +18,7 @@ python3 test.py
 
 Run the last line a few times, you will get the responses `{'message': 'Successfully processed SKU: 1234'}` and `{'error': 'Failed to process SKU: 1234'}` with a 70-30 probability (you can modify this in [`main.py`](docker/main.py)).
 
-#### Deploy Dummy Cloud Run (with Artifact Registry)
+#### Deploy Dummy Cloud Run 
 First, set your project environment variables: 
 ```bash
 export PROJECT_ID='your-project-id'
