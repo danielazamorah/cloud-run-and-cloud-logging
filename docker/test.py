@@ -9,4 +9,4 @@ try:
     response.raise_for_status()  # Raise an exception for bad responses
     print(response.json())
 except requests.RequestException as e:
-    print(f"Request failed: {e}")
+    print(response.json())
